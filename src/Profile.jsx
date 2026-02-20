@@ -122,7 +122,7 @@ useEffect(() => {
     const encodedKey = btoa(serverKey + ":");
 
     try {
-      const response = await fetch('/api/midtrans/snap/v1/transactions', {
+      const response = await fetch('/api/midtrans/transactions', {
         method: 'POST',
         headers: { 'Accept': 'application/json', 'Content-Type': 'application/json', 'Authorization': `Basic ${encodedKey}` },
         body: JSON.stringify(payload)
